@@ -1,5 +1,6 @@
 name: Datadog Agent
 slug: datadog-agent
+init: false
 description: >-
   This add-on runs the full Datadog Agent on Home Assistant.
   It monitors CPU, memory, disk, network, and Docker metrics, and exposes a DogStatsD collector
@@ -18,6 +19,7 @@ arch:
 host_network: true
 host_pid: true
 full_access: true
+docker_api: true
 
 ports:
 # DogStatsD
@@ -30,11 +32,3 @@ options:
 schema:
   api_key: str
   site: str?
-
-environment:
-  DD_DOGSTATSD_NON_LOCAL_TRAFFIC: "true"
-
-# mounting host Docker socket enables Docker monitoring
-map:
-  docker: /var/run/docker.sock
-
