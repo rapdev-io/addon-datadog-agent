@@ -51,9 +51,9 @@
     {
       "id": "addonName",
       "type": "pickString",
-      "description": "Name of addon (to add your addon to this list, please edit .vscode/tasks.json)",
+      "description": "Name of addon",
       "options": [
-        "example",
+        "datadog-agent"
       ]
     }
   ]
