@@ -5,7 +5,7 @@ build:
     BUILD_FROM: "datadog/agent:latest"
 
 labels:
-  org.opencontainers.image.title: "Home Assistant Add-on: Example add-on"
-  org.opencontainers.image.description: "Example add-on to use as a blueprint for new add-ons."
-  org.opencontainers.image.source: "https://github.com/home-assistant/addons-example"
+  org.opencontainers.image.title: "Home Assistant Add-on: Datadog Agent"
+  org.opencontainers.image.description: "Runs the Datadog Agent as a HAOS addon"
+  org.opencontainers.image.source: "https://github.com/rapdev-io/addon-datadog-agent"
   org.opencontainers.image.licenses: "Apache License 2.0"
