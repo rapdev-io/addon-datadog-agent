@@ -32,3 +32,6 @@ options:
 schema:
   api_key: str
   site: str?
+
+devices:
+  - /var/run/docker.sock:/var/run/docker.sock:r
