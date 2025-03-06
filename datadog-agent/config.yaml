@@ -1,20 +1,40 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
-version: "1.2.0"
-slug: example
-description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+name: Datadog Agent
+slug: datadog-agent
+description: >-
+  This add-on runs the full Datadog Agent on Home Assistant.
+  It monitors CPU, memory, disk, network, and Docker metrics, and exposes a DogStatsD collector
+  for the Home Assistant Datadog integration.
+url: "https://github.com/rapdev-io/addon-datadog-agent"
+version: 1.0.0
+startup: services
+boot: auto
+
 arch:
-  - armhf
-  - armv7
   - aarch64
+  - armv7
   - amd64
-  - i386
-init: false
-map:
-  - share:rw
+
+# If we want to monitor everything, we need access to everything.
+host_network: true
+host_pid: true
+full_access: true
+
+ports:
+# DogStatsD
+  8125/udp: 8125
+
 options:
-  message: "Hello world..."
+  api_key: ""
+  site: "datadoghq.com"
+
 schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+  api_key: str
+  site: str?
+
+environment:
+  DD_DOGSTATSD_NON_LOCAL_TRAFFIC: "true"
+
+# mounting host Docker socket enables Docker monitoring
+map:
+  docker: /var/run/docker.sock
+
