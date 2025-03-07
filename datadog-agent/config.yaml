@@ -18,8 +18,8 @@ arch:
 # If we want to monitor everything, we need access to everything.
 host_network: true
 host_pid: true
-full_access: true
 docker_api: true
+full_access: true
 
 ports:
 # DogStatsD
@@ -32,6 +32,3 @@ options:
 schema:
   api_key: str
   site: str?
-
-devices:
-  - /var/run/docker.sock:/var/run/docker.sock:r
