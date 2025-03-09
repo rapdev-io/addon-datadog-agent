@@ -28,7 +28,9 @@ ports:
 options:
   api_key: ""
   site: "datadoghq.com"
+  hostname: "my-homeassistant"
 
 schema:
   api_key: str
   site: str?
+  hostname: str
