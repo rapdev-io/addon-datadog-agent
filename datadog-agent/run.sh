@@ -1,20 +1,15 @@
 #!/usr/bin/with-contenv bashio
 
-export DD_API_KEY=$(bashio::config 'api_key')
-export DD_SITE=$(bashio::config 'site')
-DD_HOSTNAME=$(bashio::config 'hostname')
-export DD_DOGSTATSD_NON_LOCAL_TRAFFIC= "true"
-export DD_CONTAINER_RUNTIME="docker"
-
-# workaround for environment variable timing during agent init
-cat <<EOF > /etc/datadog-agent/datadog.yaml
-hostname: $DD_HOSTNAME
-
-dogstatsd_non_local_traffic: true
-
-apm_config:
-  enabled: false
-EOF
+#export DD_API_KEY=$(bashio::config 'api_key')
+#export DD_SITE=$(bashio::config 'site')
+#HOSTNAME=$(bashio::config 'hostname')
+#export DD_DOGSTATSD_NON_LOCAL_TRAFFIC= "true"
 
 # Execute the original Datadog Agent entrypoint
+DD_API_KEY="$(bashio::config 'api_key')" \
+DD_SITE="$(bashio::config 'site')" \
+DD_HOSTNAME="$(bashio::config 'hostname')" \
+DD_DOGSTATSD_NON_LOCAL_TRAFFIC="true" \
+DD_APM_ENABLED="false" \
+DOCKER_SOCKET_PATH="/run/docker.sock" \
 exec /init
