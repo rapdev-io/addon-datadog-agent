@@ -12,4 +12,5 @@ DD_HOSTNAME="$(bashio::config 'hostname')" \
 DD_DOGSTATSD_NON_LOCAL_TRAFFIC="true" \
 DD_APM_ENABLED="false" \
 DOCKER_SOCKET_PATH="/run/docker.sock" \
+DOCKER_HOST="unix:///run/docker.sock" \
 exec /init

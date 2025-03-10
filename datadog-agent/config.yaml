@@ -34,3 +34,8 @@ schema:
   api_key: str
   site: str?
   hostname: str
+
+environment:
+  DOCKER_SOCKET_PATH: '/run/docker.sock'
+  DOCKER_HOST: 'unix:///run/docker.sock'
+
