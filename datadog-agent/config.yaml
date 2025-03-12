@@ -5,6 +5,7 @@ description: >-
   This add-on runs the full Datadog Agent on Home Assistant.
   It monitors CPU, memory, disk, network, and Docker metrics, and exposes a DogStatsD collector
   for the Home Assistant Datadog integration.
+  IMPORTANT - you must disable protection mode for Container Monitoring to function.
 url: "https://github.com/rapdev-io/addon-datadog-agent"
 version: 1.0.0
 startup: services
