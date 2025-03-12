@@ -8,7 +8,7 @@ Good for...
   * the host running HAOS
   * your Home Assistant application containers
   * other addons
-* Collecting+shipping all your metrics to datadog (in conjunction with the datadog integration LINK TODO)
+* Collecting+shipping all your custom metrics (e.g. sensor data) to datadog in conjunction with the datadog integration (LINK TODO)
 * Using any datadog platform features on top of the above (e.g. monitors and alerts)
 
 
