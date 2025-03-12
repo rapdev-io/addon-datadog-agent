@@ -12,19 +12,17 @@ Good for...
 * Using any datadog platform features on top of the above (e.g. monitors and alerts)
 
 
-<img width="1024" alt="Container Monitoring" src="https://github.com/user-attachments/assets/d80330f6-d01f-4a67-8366-4519afc9e1e6" />
+<img width="800" alt="Container Monitoring" src="https://github.com/user-attachments/assets/d80330f6-d01f-4a67-8366-4519afc9e1e6" />
 
-Container monitoring
+Container monitoring!
 
-<img width="1024" alt="Host Monitoring" src="https://github.com/user-attachments/assets/c11365e4-5137-438b-860a-158b7c6cf114" />
+<img width="800" alt="Host Monitoring" src="https://github.com/user-attachments/assets/170f06c7-7bcb-47cf-a675-3d1b52d6f534" />
 
-Host monitoring
-
-
+Host monitoring!
 
 ## One-Click Install
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frapdev-io%2Faddon-datadog-agent)
+[![Add this repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frapdev-io%2Faddon-datadog-agent)
 
 ## Add-ons
 
