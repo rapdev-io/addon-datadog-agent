@@ -2,15 +2,14 @@
 
 This addon stands up the datadog agent in your HA environment.
 
-Good for...
+Good for:
 
 * Monitoring the health and performance of:
   * the host running HAOS
   * your Home Assistant application containers
   * other addons
-* Collecting+shipping all your custom metrics (e.g. sensor data) to datadog in conjunction with the datadog integration (LINK TODO)
+* Collecting+shipping your custom metrics (e.g. sensor data) to datadog in conjunction with the datadog integration 
 * Using any datadog platform features on top of the above (e.g. monitors and alerts)
-
 
 <img width="800" alt="Container Monitoring" src="https://github.com/user-attachments/assets/d80330f6-d01f-4a67-8366-4519afc9e1e6" />
 
