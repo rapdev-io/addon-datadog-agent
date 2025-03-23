@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Datadog Agent add-on integrates the official Datadog Agent into your Home Assistant setup to provide comprehensive system monitoring. It collects host metrics such as CPU, memory, disk, and network usage and can monitor Docker containers by mounting the Docker socket. In addition, it exposes a DogStatsD endpoint that allows the Home Assistant Datadog integration to send custom application metrics directly to the agent.
+The Datadog Agent add-on integrates the official Datadog Agent into your Home Assistant setup to provide comprehensive system monitoring. It collects host metrics such as CPU, memory, disk, and network usage, and can monitor Docker containers (e.g. other addons). In addition, it exposes a DogStatsD endpoint that allows the companion [Datadog integration](https://github.com/rapdev-io/ha-datadog-metrics) to send custom metrics like sensor data to datadog.
 
 This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using an ARM-compatible image) alongside other architectures.
 
@@ -25,8 +25,8 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
    - Click **Start**.
    - The agent will launch with full system access to collect host and container metrics.
 
-5. **Integrate with Home Assistant:**
-   - (TODO) Configure the Home Assistant Datadog integration to point to the DogStatsD endpoint on UDP port **8125**.
+5. **(Optional) Wire up custom metrics**
+   - Configure the [Home Assistant Datadog integration](https://github.com/rapdev-io/ha-datadog-metrics) to write your desired metrics to the agent.
 
 ## Detailed Setup and Configuration
 
@@ -45,12 +45,12 @@ The Datadog Agent needs elevated privileges to collect in-depth system metrics:
 
 Because these privileges bypass many of Home Assistant’s standard security restrictions, this add-on receives a **low security rating** as per Home Assistant’s [security guidelines](https://developers.home-assistant.io/docs/add-ons/presentation#security).  
 > **Security Notice:**  
-> The elevated access levels are required to provide detailed system monitoring. Only install this add-on if you trust the source and are comfortable with the security trade-offs in environments where such access is acceptable.
+> The elevated access levels are required to provide full host and container monitoring. Only install this add-on if you trust the source.
 
 ### How It Works
 
 - **System Metrics Collection:**  
-  The agent continuously gathers data on CPU, memory, disk, and network performance from the host. This data is then forwarded to Datadog for centralized monitoring and alerting.
+  The agent continuously gathers data on CPU, memory, disk, and network performance from the host. This data is then forwarded to Datadog for monitoring and alerting (if desired :grin:).
 
 - **Docker Monitoring:**  
   By mounting the Docker socket, the agent also collects container metrics, allowing you to monitor your Home Assistant container alongside other Docker containers running on your system.
