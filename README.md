@@ -29,6 +29,9 @@ Be patient, initial build might take a while.
 
 Remember to update your API key in `Configuration` before starting the agent, and consider disabling Protection mode for better monitoring.
 
+## Also consider
+
+If you want to ship custom metrics (e.g. sensor data) to datadog, consider also using the [Datadog Metrics Action](https://github.com/rapdev-io/ha-datadog-metrics).
 
 ## Add-ons
 
