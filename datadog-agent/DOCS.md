@@ -9,12 +9,11 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
 ## Quickstart
 
 1. **Add the Repository:**
-   - Navigate to Home Assistant Supervisor > Add-on Store > Repositories.
-   - Add the URL of your public GitHub repository containing this add-on.
+   - [![Add this repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frapdev-io%2Faddon-datadog-agent)
 
 2. **Install the Add-on:**
    - Locate the **Datadog Agent** add-on in the store.
-   - Click **Install**.
+   - Click **Install**. Be patient.
 
 3. **Configure the Add-on:**
    - Open the add-on configuration panel.
@@ -71,11 +70,15 @@ Because these privileges bypass many of Home Assistant’s standard security res
 - **Agent Fails to Start:**  
   Verify that you have entered a valid API key in the configuration. Check the add-on logs for error details.
 
-- **Metrics Not Appearing in Datadog:**  
-  Ensure that the DogStatsD port (UDP 8125) is correctly exposed and that Home Assistant’s Datadog integration is configured to send metrics to the correct endpoint.
+- **Custom Metrics Not Appearing in Datadog:**  
+  Ensure that the DogStatsD port (UDP 8125) is correctly exposed and that Datadog integration is configured to send metrics to the correct endpoint/port.
 
 - **Platform Compatibility:**  
+  This addon has been tested to build+run on raspberry pi 4+.
+  
   For Raspberry Pi 3B users running a 32-bit OS, you may need to use an ARM-compatible build (e.g., the IoT Agent) since the official Datadog image targets 64-bit ARM.
+
+  Please open an issue if you encounter platform-specific build issues.
 
 ## Further Reading
 

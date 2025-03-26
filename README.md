@@ -27,7 +27,7 @@ Then install via [![The add-on's dashboard](https://my.home-assistant.io/badges/
 
 Be patient, initial build might take a while.
 
-Remember to update your API key in `Configuration` before starting the agent, and consider disabling Protection mode for better monitoring.
+Remember to update your API key in `Configuration` before starting the agent, and **disabling Protection mode is advised** for better monitoring. See [DOCS](./datadog-agent/DOCS.md) for more details.
 
 ## Also consider
 
