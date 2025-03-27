@@ -12,13 +12,16 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
    - [![Add this repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frapdev-io%2Faddon-datadog-agent)
 
 2. **Install the Add-on:**
-   - Locate the **Datadog Agent** add-on in the store.
+   - Locate the **Datadog Agent** add-on in your homeassistant store: [![Open add-on store](https://my.home-assistant.io/badges/supervisor_store.svg)](https://my.home-assistant.io/redirect/supervisor_store/)
    - Click **Install**. Be patient.
 
 3. **Configure the Add-on:**
    - Open the add-on configuration panel.
    - Enter your Datadog API key in the provided field.
    - Optionally, adjust the Datadog site (defaults to `datadoghq.com`).
+
+3.5 **(Optional) Disable Protection Mode
+   - The agent requires **Protection Mode to be disabled** for full functionality.
 
 4. **Start the Add-on:**
    - Click **Start**.
