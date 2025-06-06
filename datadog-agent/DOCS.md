@@ -20,7 +20,7 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
    - Enter your Datadog API key in the provided field.
    - Optionally, adjust the Datadog site (defaults to `datadoghq.com`).
 
-3.5 **(Optional) Disable Protection Mode
+3.5 **(Optional)** Disable Protection Mode
    - The agent requires **Protection Mode to be disabled** for full functionality.
 
 4. **Start the Add-on:**
