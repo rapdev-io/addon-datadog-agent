@@ -58,7 +58,7 @@ Because these privileges bypass many of Home Assistant’s standard security res
   By mounting the Docker socket, the agent also collects container metrics, allowing you to monitor your Home Assistant container alongside other Docker containers running on your system.
 
 - **DogStatsD Interface:**  
-  The add-on exposes a DogStatsD collector on UDP port 8125. This enables [a compatible Datadog integration(https://github.com/rapdev-io/ha-datadog-metrics) to send custom metrics directly to the Datadog Agent (which are forwarded to datadog in the cloud).
+  The add-on exposes a DogStatsD collector on UDP port 8125. This enables [a compatible Datadog integration](https://github.com/rapdev-io/ha-datadog-metrics) to send custom metrics directly to the Datadog Agent (which are forwarded to datadog in the cloud).
 
 ### Configuration Options
 
