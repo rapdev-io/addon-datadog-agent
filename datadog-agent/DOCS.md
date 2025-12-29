@@ -19,6 +19,14 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
    - Open the add-on configuration panel.
    - Enter your Datadog API key in the provided field.
    - Optionally, adjust the Datadog site (defaults to `datadoghq.com`).
+   - Optionally, set [custom environment variables for the Datadog Agent](https://docs.datadoghq.com/containers/docker/?tab=standard#environment-variables) to customize it further.
+   
+     Each entry is made up of a name and value:
+
+     - `name`: The case-sensitive environment variable name.
+     - `value`: The value to be set in the environment variable.
+
+     Note: These will also overwrite any environment variable set using the configuration options above.
 
 3.5 **(Optional)** Disable Protection Mode
    - The agent requires **Protection Mode to be disabled** for full functionality.
