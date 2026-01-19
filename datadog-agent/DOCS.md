@@ -28,7 +28,7 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
 
      Note: These will also overwrite any environment variable set using the configuration options above.
 
-3.5 **(Optional)** Disable Protection Mode
+   **(Optional, Recommended)** Disable Protection Mode
    - The agent requires **Protection Mode to be disabled** for full functionality.
 
 4. **Start the Add-on:**
