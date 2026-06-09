@@ -1,6 +1,6 @@
 # Datadog Agent Home Assistant add-on repository
 
-This addon stands up the datadog agent in your HA environment.
+This addon stands up the [Datadog agent](https://docs.datadoghq.com/agent/?tab=cloud_and_container) as a docker container in your HA environment.
 
 Good for:
 
@@ -8,7 +8,7 @@ Good for:
   * the host running HAOS
   * your Home Assistant application containers
   * other addons
-* Collecting+shipping your custom metrics (e.g. sensor data) to datadog in conjunction with the datadog integration 
+* Collecting+shipping your custom metrics (e.g. sensor data) to datadog in conjunction with [a compatible datadog integration](https://github.com/rapdev-io/ha-datadog-metrics)
 * Using any datadog platform features on top of the above (e.g. monitors and alerts)
 
 <img width="800" alt="Container Monitoring" src="https://github.com/user-attachments/assets/d80330f6-d01f-4a67-8366-4519afc9e1e6" />

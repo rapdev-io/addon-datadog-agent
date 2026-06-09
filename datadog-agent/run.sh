@@ -13,4 +13,13 @@ DD_DOGSTATSD_NON_LOCAL_TRAFFIC="true" \
 DD_APM_ENABLED="false" \
 DOCKER_SOCKET_PATH="/run/docker.sock" \
 DOCKER_HOST="unix:///run/docker.sock" \
+
+# These are optional and applied last so we can override those set above if needed.
+for env_var in $(bashio::config 'env_vars|keys'); do
+    name=$(bashio::config "env_vars[${env_var}].name")
+    value=$(bashio::config "env_vars[${env_var}].value")
+    bashio::log.debug "Setting Env Variable ${name} to ${value}"
+    export "${name}=${value}"
+done
+
 exec /init

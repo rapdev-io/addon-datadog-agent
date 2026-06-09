@@ -28,11 +28,16 @@ options:
   api_key: ""
   site: "datadoghq.com"
   hostname: "my-homeassistant"
+  env_vars: []
 
 schema:
   api_key: str
   site: str?
   hostname: str
+  env_vars: [{
+      name: "str?",
+      value: "str?"
+  }]
 
 environment:
   DOCKER_SOCKET_PATH: '/run/docker.sock'

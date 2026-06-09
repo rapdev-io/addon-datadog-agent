@@ -19,8 +19,16 @@ This add-on is optimized for Raspberry Pi 4 and supports Raspberry Pi 3B (using 
    - Open the add-on configuration panel.
    - Enter your Datadog API key in the provided field.
    - Optionally, adjust the Datadog site (defaults to `datadoghq.com`).
+   - Optionally, set [custom environment variables for the Datadog Agent](https://docs.datadoghq.com/containers/docker/?tab=standard#environment-variables) to customize it further.
+   
+     Each entry is made up of a name and value:
 
-3.5 **(Optional) Disable Protection Mode
+     - `name`: The case-sensitive environment variable name.
+     - `value`: The value to be set in the environment variable.
+
+     Note: These will also overwrite any environment variable set using the configuration options above.
+
+   **(Optional, Recommended)** Disable Protection Mode
    - The agent requires **Protection Mode to be disabled** for full functionality.
 
 4. **Start the Add-on:**
@@ -58,7 +66,7 @@ Because these privileges bypass many of Home Assistant’s standard security res
   By mounting the Docker socket, the agent also collects container metrics, allowing you to monitor your Home Assistant container alongside other Docker containers running on your system.
 
 - **DogStatsD Interface:**  
-  The add-on exposes a DogStatsD collector on UDP port 8125. This enables Home Assistant’s Datadog integration to send custom metrics directly to the Datadog Agent (which are forwarded to datadog in the cloud).
+  The add-on exposes a DogStatsD collector on UDP port 8125. This enables [a compatible Datadog integration](https://github.com/rapdev-io/ha-datadog-metrics) to send custom metrics directly to the Datadog Agent (which are forwarded to datadog in the cloud).
 
 ### Configuration Options
 
